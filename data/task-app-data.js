@@ -1,0 +1,21 @@
+export const taskbarApps = [
+{
+  id:2,
+  fileName:'chrome',
+  image:'footer-images/chrome.png'
+},
+{
+  id:3,
+  fileName:'folder',
+  image:'footer-images/folder.png'
+},
+{
+  id:9,
+  fileName:'wallpaper-change',
+  image:'footer-images/wallpaper-change.jpeg'
+},
+{
+  id:7,
+  fileName:'calculator',
+  image:'footer-images/calculator.png'
+}]

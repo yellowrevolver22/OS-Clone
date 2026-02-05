@@ -1,0 +1,42 @@
+export const appsDetail=[{
+  id:1,
+  name:'Camera',
+  fileName:'camera',
+  image:'footer-images/camera.png'
+},
+{
+  id:2,
+  name:'Chrome',
+  fileName:'chrome',
+  image:'footer-images/chrome.png'
+},
+{
+  id:3,
+  name:'Folder',
+  fileName:'folder',
+  image:'footer-images/folder.png'
+},
+{
+  id:4,
+  name:'Notepad',
+  fileName:'notepad',
+  image:'footer-images/notepad.png'
+},
+{
+  id:5,
+  name:'ToDoList',
+  fileName:'todolist',
+  image:'footer-images/list-icon-1423.png'
+},
+{
+  id:6,
+  name:'Weather',
+  fileName:'weather',
+  image:'footer-images/weather.png'
+},
+{
+  id:7,
+  name:'Calculator',
+  fileName:'calculator',
+  image:'footer-images/calculator.png'
+}]

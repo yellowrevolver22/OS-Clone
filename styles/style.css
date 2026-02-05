@@ -1,0 +1,474 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+body{
+  height: 100%;
+  width: 100%;
+}
+
+/*desktop styles*/
+
+.main{
+  position: relative;
+  background-image:url(../footer-images/wallpaper1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: max(1200px,100vw);
+  height:100vh;
+  overflow: hidden;
+}
+
+.brightness-div{
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  position: absolute;
+  user-select: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.windows-shut-off{
+  display: none;
+    width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 999;
+}
+
+.windows-shutting-off{
+  display: none;
+    width: 100vw;
+  height: 100vh;
+  background-color: black;
+    z-index: 999;
+}
+
+.powering-on{
+  display: none;
+    width: 100vw;
+  height: 100vh;
+  background-color: black;
+    z-index: 999;
+}
+
+/*app-css*/
+
+.app-grid{
+  width: 25vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 12px;
+}
+
+.app{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  transition: all linear 0.1s;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid transparent;
+}
+
+.app:hover{
+  transform: scale(1.05);
+  background-color: rgba(55, 159, 219, 0.098);
+  border-color: rgba(56, 141, 252, 0.411);;
+}
+
+.app>img{
+  width: 50px;
+}
+
+.app-name{
+  font-size: 12px;
+}
+
+.window-mode{
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  width: 40vw;
+  height: 70vh;
+  border-radius: 10px;
+  border: 1px solid rgb(65, 65, 65);
+  overflow: hidden;
+  transition: width,height ease-in-out 0.10s;
+}
+
+.fullscreen-mode{
+  position: absolute;
+  width: 100%;
+  height: 93%;
+  top: 0;
+  bottom: 0;
+  transition: width,height ease-in-out 0.10s;
+}
+
+.circles{
+  height: 20px;
+  width: 100%;
+  background-color: rgb(0, 0, 54);
+  padding: 12px;
+}
+
+.circle{
+  width: 12px;
+  height: 12px;
+  border-radius: 20px;
+}
+
+.red-circle{
+  background-color: red;
+  cursor: pointer;
+}
+
+.yellow-circle{
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.green-circle{
+  background-color: green;
+  cursor: pointer;
+}
+
+.app-view{
+  width: 100%;
+  height: 100%;
+}
+
+/*taskbar css*/
+
+.taskbar{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(37, 37, 37, 0.742);
+  backdrop-filter: blur(12px);
+  width: 100vw;
+  height: 48px;
+  padding: 0px 16px;
+  position: absolute;
+  bottom: 0px;
+  border-top: 1px solid rgb(76, 76, 76);
+  z-index: 5;
+}
+
+.taskbar img{
+  width: 36px;
+  cursor: pointer;
+}
+
+.left-section-taskbar{
+  gap: 3px;
+  cursor: pointer;
+  border-radius: 5px;
+  border-top: 1px solid transparent;
+  padding: 0px 30px 0px 3px;
+  margin: 3px 0px;
+  transition: all ease-in-out 0.15s;
+}
+
+.left-section-taskbar:hover{
+  background-color: rgb(66, 66, 66);
+  border-top: 1px solid grey;
+}
+
+.taskbar-temp{
+  font-size: 14px;
+}
+
+.taskbar-weather-detail{
+  font-size: 11px;
+}
+
+.middle-section-taskbar{
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskbar-window{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  width: 46px;
+  padding: 5px;
+  border-radius: 5px;
+  border-top: 1px solid transparent;
+  transition: all ease-in-out 0.15s;
+}
+
+.taskbar-window:hover{
+  background-color: rgb(66, 66, 66);
+  border-top: 1px solid grey;
+}
+
+.taskbar-input{
+  position: relative;
+}
+
+.ri-search-line{
+  font-size: 20px;
+  position: absolute;
+  top: 7px;
+  left: 12px;
+}
+
+#taskbar-search{
+  background-color: rgb(54, 54, 54);
+  width: 250px;
+  height: 38px;
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: 1px solid rgb(89, 88, 88);
+  font-size: 16px;
+}
+
+.middle-section-apps>img{
+  padding: 3px;
+  border-top: 1px solid transparent;
+  border-radius: 5px;
+  transition: all ease-in-out 0.15s;
+}
+
+.middle-section-apps>img:hover{
+  background-color: rgb(66, 66, 66);
+  border-top: 1px solid grey;
+}
+
+.right-section-taskbar>div{
+  padding: 6px;
+  border-top: 1px solid transparent;
+  border-radius: 5px;
+  transition: all ease-in-out 0.15s;
+  cursor: pointer;
+}
+
+.right-section-taskbar>div:hover{
+  background-color: rgb(66, 66, 66);
+  border-top: 1px solid grey;
+}
+
+.system-language{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 5px;
+  font-size: 13px;
+}
+
+.wifi-audio-battery{
+  font-size: 18px;
+  gap: 7px;
+}
+
+.system-time-date{
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/*system-tray css*/
+.system-settings {
+  position: absolute;
+  max-width: 30vw;
+  bottom: -100%;
+  width: 265px;
+  height: 260px;
+  transition: all 0.35s ease-in;
+  bottom: -100%;
+  right: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.system-settings.active{
+  bottom: 10%;
+}
+
+.main-system-settings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 15px;
+  padding: 0px !important;
+  background: transparent;
+  gap: 5px;
+}
+
+.main-system-settings div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+
+  width: 75px;
+  height: 65px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.main-system-settings div:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.main-system-settings span {
+  font-size: 12px;
+  font-weight: 650;
+  color: white;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.main-system-settings i {
+  font-size: 20px;
+  color: white;
+}
+
+.display-audio {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.display,
+.audio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.display-audio i {
+  font-size: 18px;
+  color: white;
+}
+
+.display-audio input[type="range"] {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 4px;
+  background: #0078d7;
+  border-radius: 2px;
+  outline: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.display-audio input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #0078d7;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.display-audio input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+.display-audio input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #0078d7;
+  cursor: pointer;
+}
+.brightness-div{
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  position: absolute;
+  user-select: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*windows-tray*/
+.windows-tray{
+  position: absolute;
+  bottom: -100%;
+  left: 28%;
+  width: 45%;
+  height: 85%;
+  background-color: rgb(60, 60, 60);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid grey;
+  transition: all ease-in-out 0.30s;
+}
+
+.windows-tray.active{
+  bottom: 60px;
+}
+
+#windows-search-bar{
+  padding: 13px;
+  background-color: rgb(52, 52, 52);
+  border-radius: 25px;
+  border: 1px solid grey;
+}
+
+.windows-app{
+  width: 80px;
+  padding: 15px;
+  transition: all ease-in 0.15s;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.windows-app:hover{
+  background-color: rgb(90, 90, 90);
+}
+
+.windows-app>img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-on-off{
+  position: absolute;
+  bottom: 0px;
+  width: 90%;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.user-details>img{
+  width: 40px;
+  border-radius: 50px;
+}
+
+.shutdown-button{
+  cursor: pointer;
+  font-size: 20px;
+}

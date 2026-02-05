@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f4f6;
+}
+
+.folder-app {
+  max-width: 95vw;
+  width: 800px;
+  height: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+  margin: 40px auto;
+  border: 1px solid #ddd;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  flex: 1 1 200px;
+  background: #f1f1f1;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  min-width: 180px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 5px;
+  color: #444;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.sidebar li:hover {
+  background: #e0e0e0;
+}
+
+.main-content {
+  flex: 2 1 500px;
+  padding: 20px;
+}
+
+.main-content h3 {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.folders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.folder {
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.folder:hover {
+  transform: scale(1.05);
+}
+
+.folder i {
+  font-size: 48px;
+}
+
+.folder p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+
+.blue { color: #1e90ff; }
+.orange { color: #ffa500; }
+.green { color: #28a745; }
+.purple { color: #9b59b6; }
+.pink { color: #e91e63; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .folder-app {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .folder {
+    width: 80px;
+  }
+
+  .folder i {
+    font-size: 40px;
+  }
+
+  .folder p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .folder {
+    width: 70px;
+  }
+
+  .folder i {
+    font-size: 36px;
+  }
+
+  .folder p {
+    font-size: 12px;
+  }
+
+  .sidebar li {
+    font-size: 13px;
+  }
+}

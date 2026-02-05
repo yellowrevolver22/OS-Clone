@@ -1,0 +1,38 @@
+.flex{
+  display: flex;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-content{
+  justify-content: center;
+}
+
+.justify-content-between{
+  justify-content: space-between;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.less-gap{
+  gap: 3px;
+}
+
+.gap{
+  gap: 10px;
+}
+
+.more-gap{
+  gap: 16px;
+}
+
+.bg-black-full{
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/utilities.css">
+</head>
+
+<body>
+  <div class="main">
+    <!--wifi-sound-tray -->
+    <div class="brightness-div">
+
+    </div>
+    <div class="system-settings">
+      <div class="main-system-settings">
+        <div class="wifi flex-coloumn ">
+          <i class="ri-wifi-fill"></i>
+          <span>Wifi</span>
+        </div>
+        <div class="wifi flex-coloumn ">
+          <i class="ri-bluetooth-fill"></i>
+          <span>Bluetooth</span>
+        </div>
+        <div class="wifi flex-coloumn ">
+          <i class="ri-flight-takeoff-line"></i>
+          <span>Airplane mode</span>
+        </div>
+        <div class="wifi flex-coloumn ">
+          <i class="ri-battery-saver-line"></i>
+          <span>Energy Saver</span>
+        </div>
+        <div class="wifi flex-coloumn ">
+          <i class="ri-sun-line"></i>
+          <span>Night light</span>
+        </div>
+        <div class="wifi flex-coloumn ">
+          <i class="ri-wheelchair-line"></i>
+          <span>Accessbility</span>
+        </div>
+      </div>
+      <div class="display-audio flex-coloumn">
+        <div class="display">
+          <i class="ri-sun-line"></i>
+          <input class="brightness-bar" type="range">
+        </div>
+        <div class="audio">
+          <i class="ri-volume-up-line"></i>
+          <input type="range">
+        </div>
+        <div class="battery-status flex" style=" align-items: center;">
+          <i class="ri-battery-2-fill"></i>
+          <p style="font-size: 12px; ">95%
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!--Windows Tray-->
+    <div class="windows-tray flex-col more-gap">
+      <input id=windows-search-bar type="text" placeholder="Search for Apps,Folders">
+      <h2 style="text-align: center; padding: 6px;">Pinned</h2>
+      <div class="pinned-apps flex align-center more-gap">
+        <div class="windows-app js-app-2 flex-col align-center less-gap">
+          <img src="footer-images/chrome.png">
+          <div class="app-name">Chrome</div>
+        </div>
+        <div class="windows-app js-app-4 flex-col align-center less-gap">
+          <img src="footer-images/notepad.png">
+          <div class="app-name">Notepad</div>
+        </div>
+      </div>
+      <div class="user-on-off flex justify-content-between">
+        <div class="user-details flex gap align-center">
+          <img src="https://pbs.twimg.com/profile_images/1969085651682217984/NWINJ2yB_400x400.jpg">
+          <span class="user-name">Akshit Kumar</span>
+        </div>
+        <div class="shutdown-button flex align-center justify-center">
+          <i class="ri-shut-down-line"></i>
+        </div>
+      </div>
+    </div>
+
+
+    <!--Apps & Taskbar-->
+    <div class="app-grid js-app-grid"></div>
+    <div class="taskbar">
+      <div class="left-section-taskbar flex align-center"></div>
+      <div class="middle-section-taskbar flex">
+        <div class="taskbar-window">
+          <img src="footer-images/windows.png">
+        </div>
+        <div class="taskbar-input">
+          <i class="ri-search-line"></i>
+          <input id="taskbar-search" type="text" placeholder="Search">
+        </div>
+        <div class="middle-section-apps flex justify-content align-center gap"></div>
+      </div>
+      <div class="right-section-taskbar flex justify-content align-center more-gap">
+        <div class="footer-arrow-icon">
+          <i class="ri-arrow-up-s-line"></i>
+        </div>
+        <div class="system-language">
+          <span class="taskbar-language">ENG</span>
+          <span class="taskbar-language-country">IN</span>
+        </div>
+        <div class="wifi-audio-battery flex">
+          <span><i class="ri-wifi-line"></i></span>
+          <span><i class="ri-volume-up-line"></i></span>
+          <span><i class="ri-battery-low-line"></i></span>
+        </div>
+        <div class="system-time-date">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="scripts/desktop-apps.js"></script>
+</body>
+
+</html>
