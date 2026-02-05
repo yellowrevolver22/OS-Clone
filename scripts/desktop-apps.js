@@ -62,7 +62,7 @@ function openAppWindow(appData) {
       <div class="circle green-circle"></div>
     </div>
     <iframe class="app-view" frameborder="0" scrolling="no"
-      src="../Mine/apps/${appData.fileName}/index.html">
+      src="../apps/${appData.fileName}/index.html">
     </iframe>
   `;
 
@@ -223,3 +223,4 @@ brightnessBar.addEventListener("input", () => {
   let brightnessValue = (brightnessBar.value / 100 - 1) * -1;
   brightnessDiv.style.opacity = brightnessValue;
 });
+
